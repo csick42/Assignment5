@@ -1,0 +1,514 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Social Media Impact on Students</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style>
+		a { color: black; }
+	</style>
+	<link href="TeamProjectStyle.css" rel="stylesheet" type="text/css">
+	<!--Contributors: Christian Sickmeier-->
+</head>
+
+<body id="body">
+<!--Navigation-->
+	<div class="container" id="nav">
+		<div class="row">
+			<div class="col">
+				<a href="../home_page.html">Home Page</a>
+			</div>
+			<div class="col">
+				<a href="../visualization.html">Visualization</a>
+			</div>
+			<div class="col">
+				<a href="../data_description.html">Data Description</a>
+			</div>
+			<div class="col">
+				<a href="../about_us.html">About Us</a>
+			</div>
+		</div>
+	</div>
+	<hr id="nav_line"/>
+	
+	
+	
+<!--Home Page-->
+	<div class="container" id="home_page">
+		<div class="row">
+			<div class="col-5">
+				<h1 id="hp_title">Understanding Social Media's Impact on Student Health</h1>
+				<p id="hp_text">
+					Explore interactive data visualizations revealing the relationship between social media usage and college students' well-being.
+				</p>
+				<a id="explore_button" href="../visualization.html">Explore Data &rarr;</a>
+				<br>
+				<br>
+				<p>
+					This dataset brings together responses from 206 undergraduate students at a Midwestern university (Fall 2019), capturing everything from daily social media hours and favorite platforms to self-reported mental health impacts, exercise habit changes, cyberbullying experiences, and coping behaviors. By organizing these insights into clear categorical brackets and interactive charts, it lets you quickly explore how screen time relates to well-being and lifestyle. Use the filters to switch between raw counts, percentages, and guided commentary, perfect for sparking data-driven conversations about healthier social media habits on campus.
+				</p>
+			</div>
+			<div class="col">
+				<img src="Photo1-Current Data Visulization.png" class="img-fluid" alt=""/> 
+			</div>
+		</div>
+	</div>
+	
+	
+	
+<br>
+<br>
+<br>
+<br>
+
+	
+	
+<!--Navigation-->
+	<hr id="nav_line"/>
+	<div class="container" id="nav">
+		<div class="row">
+			<div class="col">
+				<a href="../home_page.html">Home Page</a>
+			</div>
+			<div class="col">
+				<a href="../visualization.html">Visualization</a>
+			</div>
+			<div class="col">
+				<a href="../data_description.html">Data Description</a>
+			</div>
+			<div class="col">
+				<a href="../about_us.html">About Us</a>
+			</div>
+		</div>
+	</div>
+	<hr id="nav_line"/>
+	
+	
+	
+<!--Visualization Page-->
+	<div class="container" id="vis_page">
+		<div class="row">
+			<div class="col-10">
+				<h1 id="vis_title">Social Media Impact on College Students' Health</h1>
+				<p id="vis_text">
+					Interactive visualizations exploring the correlation between social media usage patterns and various helath indicators among college students.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="vis_filter_area">
+		<div class="filter_bar border border-dark p-3">
+			<div class="row">
+				<div class="col">
+					<div class="filter_option">
+						<label for="ChartTypeSelect">Chart Type:</label>
+							<select id="ChartTypeSelect">
+								<option>Pie Graph</option>
+								<option>Clustered Column</option>
+								<option>Radar with Markers</option>
+							</select>
+					</div>
+				</div>
+				<div class="col">
+					<div class="filter_option">
+						<label for="PieDetailsSelect">Pie Details:</label>
+							<select id="PieDetailsSelect">
+								<option>Clear</option>
+								<option>Percentages</option>
+								<option>Numbers</option>
+							</select>
+					</div>
+				</div>
+				<div class="col">
+					<div class="filter_option">
+						<label for="DataAnalysisSelect">Data Analysis:</label>
+							<select id="DataAnalysisSelect">
+								<option>Off</option>
+								<option>On</option>
+							</select>
+					</div>
+				</div>
+		  </div>
+		</div>
+	</div>
+	<div>
+		<table id="vis_grid">
+			<tr>
+				<td><img src="TimeSpentSNS.png" alt="" width="475" height="285" usemap="#TimeSpentSNSMap" id="TimeSpentSNS"/> 
+					<map name="TimeSpentSNSMap">
+						<area shape="rect" coords="4,1,468,282" id="TSArea" class="ToggleArea" data-target="TimeSpentSNSText" data-text="Displays the breakdown of student answers to: “On average, how <br> many hours per day do you spend on social media?”">
+					</map>
+					<p id="TimeSpentSNSText"></p>
+					<p id="TimeSpentSNSAnalysis"></p>
+				</td>
+				<td><img src="MentalHealth.png" alt="" width="471" height="282" usemap="#MentalHealthMap" id="MentalHealth"/>
+					<map name="MentalHealthMap">
+						<area shape="rect" coords="5,4,463,278" id="MHArea" class="ToggleArea" data-target="MentalHealthText" data-text="Shows how students responded to: “How much has your social <br> media use affected your mental health?” (e.g. “A lot,” “Somewhat,” <br> “Not at all.”)">
+					</map>
+					<p id="MentalHealthText"></p>
+					<p id="MentalHealthAnalysis"></p>
+				</td>
+				<td><img src="SNSExercise.png" alt="" width="473" height="284" usemap="#SNSExerciseMap" id="SNSExercise"/>
+					<map name="SNSExerciseMap">
+						<area shape="rect" coords="4,5,470,281" id="ExArea" class="ToggleArea" data-target="SNSExerciseText" data-text="Shows responses to: “How has your social media use influenced <br> your daily exercise habits?” (e.g. “Decreased,” “No change,” “Increased.”)">
+					</map>
+					<p id="SNSExerciseText"></p>
+					<p id="SNSExerciseAnalysis"></p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="Cyberbullying.png" alt="" width="473" height="281" usemap="#CyberbullyingMap" id="Cyberbullying"/>
+					<map name="CyberbullyingMap">
+						<area shape="rect" coords="4,3,466,276" id="CArea" class="ToggleArea" data-target="CyberbullyingText" data-text="Presents the distribution of answers to: “Have you experienced <br> cyberbullying on social media?” (e.g. “Yes,” “No,” “Unsure.”)">
+					</map>
+					<p id="CyberbullyingText"></p>
+					<p id="CyberbullyingAnalysis"></p>
+				</td>
+				<td><img src="SNSAddiction.png" alt="" width="470" height="282" usemap="#SNSAddictionMap" id="SNSAddiction"/>
+					<map name="SNSAddictionMap">
+						<area shape="rect" coords="5,3,461,278" id="AArea" class="ToggleArea" data-target="SNSAddictionText" data-text="Reflects student replies to: “Do you consider your social media <br> use to be addictive?” (e.g. “Yes,” “No,” “Unsure.”)">
+					</map>
+					<p id="SNSAddictionText"></p>
+					<p id="SNSAddictionAnalysis"></p>
+				</td>
+				<td><img src="SNSEscape.png" alt="" width="473" height="281" usemap="#SNSEscapeMap" id="SNSEscape"/>
+					<map name="SNSEscapeMap">
+  						<area shape="rect" coords="7,10,465,277" id="EsArea" class="ToggleArea" data-target="SNSEscapeText" data-text="Shows how students answered: “Do you use social media <br> to escape or avoid daily problems?” (e.g. “Often,” “Sometimes,” “Never.”)">
+					</map>
+					<p id="SNSEscapeText"></p>
+					<p id="SNSEscapeAnalysis"></p>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="container">
+		<h2 id="vis_kf">Key Research Findings</h2>
+		<div class="row">
+			<div class="col">
+				<div class="findings">
+					<h3>Usage Patterns</h3>
+					<p>
+						Nearly two-thirds of students (about 65%) spend between 1–3 hours per day on social media, and over 20% log 4 or more hours daily. Fewer than 15% report under one hour. This shows that social platforms occupy a significant slice of most students’ free time.
+					</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="findings">
+					<h3>Mental Health Impacts</h3>
+					<p>
+						A combined 53% of respondents say social media has harmed their mental health at least “somewhat” (39%) or “a lot” (14%), while 47% report “not at all.” That majority highlights a clear association between time online and feelings of anxiety, disrupted sleep, or mood swings.
+					</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="findings">
+					<h3>Physical Activity Habits</h3>
+					<p>
+						Nearly half of students (47%) say social media use has decreased their daily exercise, 7% “always,” 40% “sometimes”, while 53% experience no change. This suggests that for many, screen time is displacing physical activity, with potential long-term health implications.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="TeamProjectEvents.js"></script>
+	
+	
+	
+<br>
+<br>
+<br>
+<br>
+	
+	
+	
+<!--Navigation-->
+	<hr id="nav_line"/>
+	<div class="container" id="nav">
+		<div class="row">
+			<div class="col">
+				<a href="../home_page.html">Home Page</a>
+			</div>
+			<div class="col">
+				<a href="../visualization.html">Visualization</a>
+			</div>
+			<div class="col">
+				<a href="../data_description.html">Data Description</a>
+			</div>
+			<div class="col">
+				<a href="../about_us.html">About Us</a>
+			</div>
+		</div>
+	</div>
+	<hr id="nav_line"/>
+
+	
+	
+<!--Data Description Page-->
+	<div class="container" id="dd_page">
+		<div class="row">
+			<div class="col">
+				<h1 id="dd_title">Social Media Impact on College Student's Health</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-10">
+				<h2 id="dd_title2">Dataset Overview</h2>
+				<p id="dd_text">
+					This dataset explores the relationship between social media usage patterns and various health indicators among college students across multiple universities.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="info_box">Sample Size: 206 Students</div>
+			</div>
+			<div class="col">
+				<div class="info_box">Time Period: Fall 2019 semester</div>
+			</div>
+			<div class="col">
+				<div class="info_box">Author: Daniel VanOverbeke</div>
+			</div>
+		</div>
+	<br>
+	<div class="container" id="dd_var">
+		<div class="row">
+			<div class="col">
+				<h2 id="dd_var_title">Variables Measured</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="dd_var_col">
+					<h4 class="dd_vm_title">Social Media Usage</h4>
+					<ul>
+						<li class="dd_vm_li">Daily usage time (hours)</li>
+						<li class="dd_vm_li">Platforms used</li>
+						<li class="dd_vm_li">Engagemnet metrics</li>
+						<li class="dd_vm_li">Content consumption patterns</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col">
+				<div class="dd_var_col">
+					<h4 class="dd_vm_title">Health Indicators</h4>
+					<ul>
+						<li class="dd_vm_li">Sleep patterns</li>
+						<li class="dd_vm_li">Anxiety levels</li>
+						<li class="dd_vm_li">Physical activity</li>
+						<li class="dd_vm_li">Cyberbullying experiences</li>
+						<li class="dd_vm_li">Perceived addiction</li>
+						<li class="dd_vm_li">Coping/escape behaviors</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container" id="dd_atd">
+		<div class="row">
+			<div class="col">
+				<h2 id="dd_atd_title">About the Data</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div id="dd_atd_col">
+					<h4 id="dd_atd_col_title">Data was collected through a combination of:</h4>
+					<ul>
+						<li>Online surveys administered to undergraduate students</li>
+						<li>Mobile app usage logs</li>
+						<li>Voluntary self-reported health questionnaires</li>
+						<li>Structured follow-up interviews</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container" id="dd_description">
+		<div class="row">
+			<div class="cos-10">
+				<hr / id="dd_ds">
+				<h2>Data Description and Significance</h2>
+				<p>
+					This dataset captures responses from 206 undergraduate students at a Midwestern U.S. university, gathered during the Fall 2019 semester via an IRB-approved online survey (<a href="https://opensiuc.lib.siu.edu/cgi/viewcontent.cgi?article=2270&&context=gs_rp&&sei-redir=1&referer=https%253A%252F%252Fscholar.google.com%252Fscholar%253Fq%253Dsocial%252Bmedia%252527s%252Beffect%252Bon%252Bcollege%252Bstudents%252Bmental%252Bhealth%252Bwith%252Bdata%2526hl%253Den%2526as_sdt%253D0%2526as_vis%253D1%2526oi%253Dscholart#search=%22social%20medias%20effect%20college%20students%20mental%20health%20data%22">VanOverbeke, 2019</a>). From the outset, its appeal lies in the straightforward but comprehensive way it balances breadth and depth: rather than long open-ended questions, it uses clear categorical brackets and yes/no formats that make it easy to spot key trends. Respondents reported their average daily social media use in hour ranges (“Under 1 hr,” “1–2 hrs,” “2–3 hrs,” “3–4 hrs,” “4+ hrs”) and indicated which platforms they frequented most, data that anchors the entire study in quantifiable screen-time habits. <br><br>
+
+					Beyond mere time spent, the survey probes how students themselves feel about the impact of those hours online. Using a three-point scale (“A lot,” “Somewhat,” “Not at all”), participants rated how their mental health was affected by social media, illuminating both widespread anxieties and pockets of resilience. They also noted any shifts in exercise patterns, whether their physical activity had “Decreased,” shown “No change,” or, surprisingly, “Increased”, revealing how screen time can either displace or coexist with healthy routines. Separate questions address experiences of cyberbullying (“Yes,” “No,” “Unsure”) and self-perceptions of addiction (“Yes,” “No,” “Unsure”), while another set gauges the extent to which students use social media as an emotional escape (“Never,” “Sometimes,” “Often”). Each response is coded into neat, comparable categories, which minimizes ambiguity and lets us directly chart the relative frequencies of each outcome. <br><br>
+
+					What makes this dataset especially compelling is its ability to weave together subjective well-being and behavioral health within a single framework. On one hand, we see how students perceive their own mental and emotional states, you can immediately grasp the fact that a majority feel at least somewhat harmed by excessive scrolling. On the other hand, by tracking exercise changes and escape behaviors, we glimpse the real-world habits that accompany those feelings. The inclusion of cyberbullying questions further deepens this picture, tying social interaction risks back to both mental health and screen-time levels. In practical terms, this means we can identify not just how many hours students spend online, but also what psychological and physical patterns tend to follow those hours. <br><br>
+
+					Another layer of interest comes from the timing: Fall 2019 sits just before campuses shifted en masse to remote learning. As higher education grapples with evolving digital landscapes, having a clear pre-pandemic benchmark is invaluable. We can compare these baseline figures, such as the roughly 20% of students reporting four or more hours of daily social media, with post-pandemic surveys to see whether forced isolation exacerbated screen-time effects or whether new wellness strategies have made a difference. <br><br>
+
+					To surface these insights clearly, we opted for proportional pie charts as our primary visual tool. Pie charts excel at showing categorical splits, when stakeholders glance at a chart and see a large slice labelled “Somewhat harmed,” that proportion registers instantly. We layered on interactivity so that users can toggle between raw counts (the exact number of students), simple percentages, and our guided narrative commentary. This multi-view approach caters to varied audiences: researchers might dig into raw figures for statistical analysis, while student-affairs professionals often prefer percentages that speak directly to campus-wide initiatives. <br><br>
+
+					The interactive filters also allow viewers to switch between “Clear” (raw counts), “Percentages,” and “Numbers,” ensuring no one is left guessing what the data represent. And by offering a separate “Data Analysis” toggle, we provide on-demand commentary that walks users through each slice: for instance, pointing out that 47% of respondents report decreased exercise tied to social media use, or that 18% have experienced cyberbullying. Combining visuals and narrative transforms static numbers into a compelling story, highlighting both the scale and nuance of each finding. <br><br>
+
+					Ultimately, this dataset and its accompanying visualizations serve as a practical roadmap for university wellness initiatives. With clear evidence, over half of the sample feeling some mental health impact, nearly half seeing reduced exercise, and a meaningful minority facing cyberbullying, campus leaders can design targeted interventions. Whether that means digital-literacy workshops, mindfulness programs, or partnerships with fitness services, the data guide where to focus resources. In our view, the real power of this work lies in its clarity: by translating raw survey responses into interactive, story-driven charts, we make it straightforward for decision-makers to understand the issues and act on them.
+				</p>
+			</div>
+		</div>	
+	</div>
+	</div>
+	
+	
+	
+<br>
+<br>
+<br>
+<br>
+	
+	
+	
+<!--Navigation-->
+	<hr id="nav_line"/>
+	<div class="container" id="nav">
+		<div class="row">
+			<div class="col">
+				<a href="../home_page.html">Home Page</a>
+			</div>
+			<div class="col">
+				<a href="../visualization.html">Visualization</a>
+			</div>
+			<div class="col">
+				<a href="../data_description.html">Data Description</a>
+			</div>
+			<div class="col">
+				<a href="../about_us.html">About Us</a>
+			</div>
+		</div>
+	</div>
+	<hr id="nav_line"/>
+
+	
+	
+<!--About Us Page-->
+	<div class="container" id="au_page">
+		<div class="row">
+			<div class="col">
+				<h1 id="au_title">About Us</h1>
+				<p id="au_text">
+					Meet the team exploring the impact of social media on college student's health <br> through data visualization.
+				</p>
+			</div>
+		</div>
+	<div class="container" id="au_team">
+		<div class="row">
+			<div class="col">
+				<div class="au_member">
+					<div class="photo_placeholder"><img src="Andy_hs.jpg" class="img-fluid" alt=""/></div>
+					<br /> <br /> <br />
+					<h4 class="au_name">Andy Mang</h4>
+					<p class="au_major">
+						Major: Informatics
+					</p>
+					<hr />
+					<p class="au_cs">
+						 I'm Andy Mang, currently pursuing a degree in Informatics at IUI. Having been around technology and getting my hands on building computers, handling cameras, sound systems and equipment and much more my whole life, I have hands on experience and enjoy working with the technology that helps us connect to the people in our lives. In the future, I'd like to use my technology skills along with the skills I learn through informatics to make an even bigger change with how we interact with tech in the world. Outside of school, I enjoy playing guitar and playing shows throughout the city.
+					</p>
+					<hr />
+					<p>
+						Presented the initial idea and the final demonstration. 
+					</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="au_member">
+					<div class="photo_placeholder">Image Here</div>
+					<br /> <br /> <br />
+					<h4 class="au_name">Chandler Budd</h4>
+					<p class="au_major">
+						Major: 
+					</p>
+					<hr />
+					<p class="au_cs">
+						Class Standing
+					</p>
+					<hr />
+					<p>
+						Contribution
+					</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="au_member">
+					<div class="photo_placeholder"><img src="Christian_hs.jpg" class="img-fluid" alt=""/></div>
+					<br /> <br /> <br />
+					<h4 class="au_name">Christian Sickmeier</h4>
+					<p class="au_major">
+						Major: Marketing
+					</p>
+					<hr />
+					<p class="au_cs">
+						Christian is a Senior in the Kelley School of Business. He loves reading, writing, and crafting stories through all different types of mediums. After graduating in May he will be in the MSIS program (Masters of Science in Information Systems), down in Bloomington. 
+					</p>
+					<hr />
+					<p>
+						Coded the website, analyzed the data, and visualized the data. Presented the intial and the final demonstration. Created the final slide deck. 
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="au_member">
+					<div class="photo_placeholder"><img src="Deon_hs.JPG" class="img-fluid" alt=""/></div>
+					<br /> <br /> <br /> <br /> <br /> <br /> 
+					<h4 class="au_name">Deon Siziba</h4>
+					<p class="au_major">
+						Major: Informatics
+					</p>
+					<hr />
+					<p class="au_cs">
+						My name is Deon, I'm 20 years old and currently a sophomore majoring in Informatics. As the oldest sibling in my family, I’ve always embraced responsibility and leadership. I’m passionate about technology and how it shapes the world, which is what drew me to my major. Outside of academics, I’m all about good music and gaming — whether it’s chilling with a solid playlist or diving into virtual worlds, that’s my zone.
+					</p>
+					<hr />
+					<p>
+						Presented the final demonstration.
+					</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="au_member">
+					<div class="photo_placeholder"><img src="Karla_hs.jpeg" class="img-fluid" alt=""/></div>
+					<br /> <br /> <br /> <br /> <br /> <br />
+					<h4 class="au_name">Karla Franco</h4>
+					<p class="au_major">
+						Major: Nursing
+					</p>
+					<hr />
+					<p class="au_cs">
+						I'm Karla Franco and my major is Nursing. I am a junior and a first-generation student. I love to spend time with my friends, go to the gym, and read. 
+					</p>
+					<hr />
+					<p>
+						Created the slides and offered up the idea of social media effecting college students' health.
+					</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="au_member">
+					<div class="photo_placeholder"><img src="Kelli_hs.jpeg" class="img-fluid" alt=""/></div>
+					<br /> <br /> <br /> <br /> <br /> <br /> 
+					<h4 class="au_name">Kelli Davis</h4>
+					<p class="au_major">
+						Major: Health Sciences
+					</p>
+					<hr />
+					<p class="au_cs">
+						I am a junior at IU Indianapolis. I am taking this informatics class because I was interested in informatics and learning what it is about. 
+					</p>
+					<hr />
+					<p>
+						Presented the final demonstration. 
+					</p>
+				</div>
+			</div>
+		</div>
+		<br />
+		<p id="contact">
+			Contact us at <a href="csickmei@iu.edu">csickmei@iu.edu</a>
+		</p>
+	</div>
+	</div>
+</body>
+</html>

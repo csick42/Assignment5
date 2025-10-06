@@ -1,0 +1,261 @@
+@charset "utf-8";
+/* CSS Document */
+
+#body {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	
+}
+
+/* Navigation Section */
+
+#nav {
+	text-decoration: none;
+	font-size: 120%;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 10px;
+	
+}
+
+#nav_line {
+	border: solid 2px black;
+	
+}
+
+/* Home Page */
+
+#home_page {
+	margin: 20px;
+	
+}
+
+#hp_title {
+	font-weight: bold;
+	
+}
+
+#hp_text {
+	font-size: 130%;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	
+}
+
+#explore_button {
+	display: inline;
+	padding: 8px;
+	text-decoration: none;
+	background-color: black;
+	color: white;
+	
+}
+
+/* Visualization Page */
+
+#vis_page {
+	margin: 20px;
+	
+}
+
+#vis_title {
+	font-weight: bold;
+	padding-top: 50px;
+	
+}
+
+#vis_text {
+	font-size: 130%;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	
+}
+
+#vis_filter_area {
+	
+	
+}
+
+#filter_bar {
+	margin: 20px;
+	
+}
+
+.filter_option {
+	display: inline;
+	margin-right: 20px;
+	
+}
+
+#vis_grid {
+	margin-left: 220px;
+	margin-top: 10px;
+	border: solid 2px black;
+	
+}
+
+#Cyberbullying {
+	margin-top: 75px;
+	
+}
+
+#SNSAddiction {
+	margin-top: 75px;
+	
+}
+
+#SNSEscape {
+	margin-top: 75px;
+	
+}
+
+#vis_kf {
+	text-align: center;
+	padding-top: 50px;
+	font-weight: bold;
+	padding-bottom: 20px;
+	
+}
+
+.findings {
+	
+	text-align: center;
+}
+
+/* Data Description Page */
+
+#dd_page {
+	
+	
+}
+
+#dd_title {
+	font-weight: bold;
+	padding-top: 50px;
+	
+}
+
+#dd_title2 {
+	padding-top: 20px;
+	text-decoration: underline;
+	font-weight: bold;
+	
+}
+
+#dd_text {
+	font-size: 130%;
+	
+}
+
+.info_box {
+	background-color: #C0C0C0;
+	text-align: center;
+	padding: 30px;
+	border: solid 1px black;
+	font-size: 120%;
+	
+}
+
+#dd_var {
+	border: solid 1px black;
+	
+}
+
+#dd_var_title {
+	text-align: center;
+	padding-top: 25px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.dd_var_col {
+
+	
+}
+
+.dd_vm_title {
+	text-align: center;
+	
+}
+
+.dd_vm_li {
+	
+}
+
+#dd_atd {
+	border: solid 1px black;
+	
+}
+
+#dd_atd_title {
+	text-align: center;
+	padding-top: 25px;
+	text-decoration: underline;
+	font-weight: bold;
+	
+}
+
+#dd_atd_col {
+	
+	
+}
+
+#dd_atd_col_title {
+	
+	
+}
+
+#dd_ds {
+	border: solid 2px black;
+}
+
+/* About Us Page */
+
+#au_page {
+	
+	
+}
+
+#au_title {
+	font-weight: bold;
+	padding-top: 50px;
+	text-align: center;
+	
+}
+
+#au_text {
+	font-size: 120%;
+	text-align: center;
+	
+}
+
+.au_member {
+	text-align: center;
+	
+}
+
+.photo_placeholder {
+	width: 200px;
+	height: 150px;
+	margin-left: 70px;
+	
+}
+
+.au_name {
+
+	
+}
+
+.au_major {
+	
+	
+}
+
+.au_cs {
+	
+	
+}
+
+#contact {
+	text-align: center;
+	
+}

@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Social Media Impact on Students</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style>
+		a { color: black; }
+	</style>
+	<link href="Visualization_Page_CSS.css" rel="stylesheet" type="text/css">
+	<!--Contributors: Christian Sickmeier-->
+</head>
+
+<body id="body">	
+<!--Navigation-->
+	<div class="container" id="nav">
+		<div class="row">
+			<div class="col">
+				<a href="Home_Page_HTML.html">Home Page</a>
+			</div>
+			<div class="col" id="location">
+				<a href="Visualization_Page_HTML.html">Visualization</a>
+			</div>
+			<div class="col">
+				<a href="Data_Description_Page_HTML.html">Data Description</a>
+			</div>
+			<div class="col">
+				<a href="About_Us_Page_HTML.html">About Us</a>
+			</div>
+		</div>
+	</div>
+	<hr id="nav_line"/>
+	
+	
+	
+<!--Visualization Page-->
+	<div class="container" id="vis_page">
+		<div class="row">
+			<div class="col-10">
+				<h1 id="vis_title">Social Media Impact on College Students' Health</h1>
+				<p id="vis_text">
+					Interactive visualizations exploring the correlation between social media usage patterns and various helath indicators among college students.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="vis_filter_area">
+		<div class="filter_bar border border-dark p-3">
+			<div class="row">
+				<div class="col">
+					<div class="filter_option">
+						<label for="ChartTypeSelect">Chart Type:</label>
+							<select id="ChartTypeSelect">
+								<option>Pie Graph</option>
+								<option>Clustered Column</option>
+								<option>Radar with Markers</option>
+							</select>
+					</div>
+				</div>
+				<div class="col">
+					<div class="filter_option">
+						<label for="PieDetailsSelect">Pie Details:</label>
+							<select id="PieDetailsSelect">
+								<option>Clear</option>
+								<option>Percentages</option>
+								<option>Numbers</option>
+							</select>
+					</div>
+				</div>
+				<div class="col">
+					<div class="filter_option">
+						<label for="DataAnalysisSelect">Data Analysis:</label>
+							<select id="DataAnalysisSelect">
+								<option>Off</option>
+								<option>On</option>
+							</select>
+					</div>
+				</div>
+		  </div>
+		</div>
+	</div>
+	<div>
+		<table id="vis_grid">
+			<tr>
+				<td><img src="TimeSpentSNS.png" alt="" width="475" height="285" usemap="#TimeSpentSNSMap" id="TimeSpentSNS"/> 
+					<map name="TimeSpentSNSMap">
+						<area shape="rect" coords="4,1,468,282" id="TSArea" class="ToggleArea" data-target="TimeSpentSNSText" data-text="Displays the breakdown of student answers to: “On average, how <br> many hours per day do you spend on social media?”">
+					</map>
+					<p id="TimeSpentSNSText"></p>
+					<p id="TimeSpentSNSAnalysis"></p>
+				</td>
+				<td><img src="MentalHealth.png" alt="" width="471" height="282" usemap="#MentalHealthMap" id="MentalHealth"/>
+					<map name="MentalHealthMap">
+						<area shape="rect" coords="5,4,463,278" id="MHArea" class="ToggleArea" data-target="MentalHealthText" data-text="Shows how students responded to: “How much has your social <br> media use affected your mental health?” (e.g. “A lot,” “Somewhat,” <br> “Not at all.”)">
+					</map>
+					<p id="MentalHealthText"></p>
+					<p id="MentalHealthAnalysis"></p>
+				</td>
+				<td><img src="SNSExercise.png" alt="" width="473" height="284" usemap="#SNSExerciseMap" id="SNSExercise"/>
+					<map name="SNSExerciseMap">
+						<area shape="rect" coords="4,5,470,281" id="ExArea" class="ToggleArea" data-target="SNSExerciseText" data-text="Shows responses to: “How has your social media use influenced <br> your daily exercise habits?” (e.g. “Decreased,” “No change,” “Increased.”)">
+					</map>
+					<p id="SNSExerciseText"></p>
+					<p id="SNSExerciseAnalysis"></p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="Cyberbullying.png" alt="" width="473" height="281" usemap="#CyberbullyingMap" id="Cyberbullying"/>
+					<map name="CyberbullyingMap">
+						<area shape="rect" coords="4,3,466,276" id="CArea" class="ToggleArea" data-target="CyberbullyingText" data-text="Presents the distribution of answers to: “Have you experienced <br> cyberbullying on social media?” (e.g. “Yes,” “No,” “Unsure.”)">
+					</map>
+					<p id="CyberbullyingText"></p>
+					<p id="CyberbullyingAnalysis"></p>
+				</td>
+				<td><img src="SNSAddiction.png" alt="" width="470" height="282" usemap="#SNSAddictionMap" id="SNSAddiction"/>
+					<map name="SNSAddictionMap">
+						<area shape="rect" coords="5,3,461,278" id="AArea" class="ToggleArea" data-target="SNSAddictionText" data-text="Reflects student replies to: “Do you consider your social media <br> use to be addictive?” (e.g. “Yes,” “No,” “Unsure.”)">
+					</map>
+					<p id="SNSAddictionText"></p>
+					<p id="SNSAddictionAnalysis"></p>
+				</td>
+				<td><img src="SNSEscape.png" alt="" width="473" height="281" usemap="#SNSEscapeMap" id="SNSEscape"/>
+					<map name="SNSEscapeMap">
+  						<area shape="rect" coords="7,10,465,277" id="EsArea" class="ToggleArea" data-target="SNSEscapeText" data-text="Shows how students answered: “Do you use social media <br> to escape or avoid daily problems?” (e.g. “Often,” “Sometimes,” “Never.”)">
+					</map>
+					<p id="SNSEscapeText"></p>
+					<p id="SNSEscapeAnalysis"></p>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="container">
+		<h2 id="vis_kf">Key Research Findings</h2>
+		<div class="row">
+			<div class="col">
+				<div class="findings">
+					<h3>Usage Patterns</h3>
+					<p>
+						Nearly two-thirds of students (about 65%) spend between 1–3 hours per day on social media, and over 20% log 4 or more hours daily. Fewer than 15% report under one hour. This shows that social platforms occupy a significant slice of most students’ free time.
+					</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="findings">
+					<h3>Mental Health Impacts</h3>
+					<p>
+						A combined 53% of respondents say social media has harmed their mental health at least “somewhat” (39%) or “a lot” (14%), while 47% report “not at all.” That majority highlights a clear association between time online and feelings of anxiety, disrupted sleep, or mood swings.
+					</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="findings">
+					<h3>Physical Activity Habits</h3>
+					<p>
+						Nearly half of students (47%) say social media use has decreased their daily exercise, 7% “always,” 40% “sometimes”, while 53% experience no change. This suggests that for many, screen time is displacing physical activity, with potential long-term health implications.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+<script src="Visualization_Page_JS.js"></script>
+</body>
+</html>

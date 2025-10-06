@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+/* Contributors: Christian Sickmeier */
+
+#body {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	
+}
+
+/* Navigation Section */
+
+#nav {
+	text-decoration: none;
+	font-size: 120%;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 10px;
+	
+}
+
+#nav_line {
+	border: solid 2px black;
+	
+}
+
+#location {
+	background-color:#BCBCBC;
+}
+
+/* Home Page */
+
+#home_page {
+	margin: 20px;
+	margin-left: 400px;
+	
+}
+
+#hp_title {
+	font-weight: bold;
+	
+}
+
+#hp_text {
+	font-size: 130%;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	
+}
+
+#explore_button {
+	display: inline;
+	padding: 8px;
+	text-decoration: none;
+	background-color: black;
+	color: white;
+	
+}

@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+/* Contributors: Christian Sickmeier */
+
+#body {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	
+}
+
+/* Navigation Section */
+
+#nav {
+	text-decoration: none;
+	font-size: 120%;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 10px;
+	
+}
+
+#nav_line {
+	border: solid 2px black;
+	
+}
+
+#location {
+	background-color:#BCBCBC;
+}
+
+/* Visualization Page */
+
+#vis_page {
+	margin: 20px;
+	
+}
+
+#vis_title {
+	font-weight: bold;
+	padding-top: 50px;
+	
+}
+
+#vis_text {
+	font-size: 130%;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	
+}
+
+#vis_filter_area {
+	
+	
+}
+
+#filter_bar {
+	margin: 20px;
+	
+}
+
+.filter_option {
+	display: inline;
+	margin-right: 20px;
+	
+}
+
+#vis_grid {
+	margin-left: 220px;
+	margin-top: 10px;
+	border: solid 2px black;
+	
+}
+
+#Cyberbullying {
+	margin-top: 75px;
+	
+}
+
+#SNSAddiction {
+	margin-top: 75px;
+	
+}
+
+#SNSEscape {
+	margin-top: 75px;
+	
+}
+
+#vis_kf {
+	text-align: center;
+	padding-top: 50px;
+	font-weight: bold;
+	padding-bottom: 20px;
+	
+}
+
+.findings {
+	
+	text-align: center;
+}

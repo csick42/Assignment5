@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Projects | Christian Sickmeier</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header class="header">
+		<div class="container nav">
+			<div class="brand">Christian Sickmeier</div>
+			<nav aria-label="Primary">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="resume.html">Resume</a></li>
+					<li><a class="active" href="projects.html">Projects</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="container section">
+		<h1>Projects</h1>
+
+		<article class="card">
+			<h2>FinTime – AI-powered Financial Advisor (Honors I‑Core)</h2>
+			<p>
+				Kelley’s I‑Core integrates Finance, Marketing, Operations, and Leadership in a rigorous, semester‑long
+				program. In Fall 2023 Honors I‑Core, my team acted as entrepreneurs and created an AI‑powered
+				financial advisor app called <strong>FinTime</strong> to deliver personalized guidance.
+			</p>
+			<p>
+				The semester culminated in a final pitch to a panel of industry leaders and AI specialists. Our work was
+				featured by the Kelley Indianapolis blog. See the write‑up:
+				<a href="https://blog.kelley.indianapolis.iu.edu/2024/03/11/kelley-indianapolis-honors-students-pitch-ai-product-development-projects-to-experts/" target="_blank" rel="noopener">Kelley Indianapolis Honors students pitch AI product development projects to experts</a>.
+			</p>
+
+			<div class="grid-2">
+				<figure>
+					<img src="images/cohort-photo.JPEG" alt="Class photo placeholder using Christian headshot" />
+					<figcaption>Starting from the left are me, Laci Provenzano, Kennedy Garrett, Jake Adamczewski, Prince Johnson, Nerea Lancho Poza, Sam McWilliams, Luke Lonneman, Abigail Price, Leighanna Coley, Delaney Brown, Will Herndon, and Hieu Nguyen.</figcaption>
+				</figure>
+				<figure>
+					<img src="images/team-photo.jpg" alt="Team photo placeholder using teammate headshot" />
+					<figcaption>This is my team, Kennedy Garrett, Prince Johnson, Laci Provenzano, and Jake Adamczewski.</figcaption>
+				</figure>
+			</div>
+
+			<section class="section">
+				<h3>Key Deliverables</h3>
+				<ul>
+					<li><a href="resources/FinTime_Capital_Budgeting.xlsx" target="_blank" rel="noopener">Final Capital Budgeting (.xlsx)</a> — financial investment, projected cash flows (5 years), and sensitivity to required return, unit sales, fixed/variable costs, and price.</li>
+					<li><a href="resources/FinTime_Executive_Brief.docx" target="_blank" rel="noopener">FinTime Executive Brief (.docx)</a> — value proposition; AI‑driven efficiency; planning tools; real‑time monitoring; client‑centric design.</li>
+					<li><a href="resources/FinTime_Final_Presentation.pptx" target="_blank" rel="noopener">Final Presentation (.pptx)</a> — features, timeline, marketing strategy, financial projections, competitive positioning, and recommendation.</li>
+				</ul>
+			</section>
+
+			<p class="kicker">Source and citation: Kelley Indianapolis blog linked above.</p>
+		</article>
+
+		<article class="card section">
+			<h2>The Effects of Social Media on the Health of College Students</h2>
+			<p>
+				This analysis explores relationships between social media use and mental well‑being among college students.
+				Variables include time spent on social media, anxiety and depression levels, sleep patterns, and academic performance.
+				The dataset originates from a research study hosted on OpenSIUC (a publicly accessible academic repository).
+			</p>
+			<section class="section">
+				<h3>Website</h3>
+				<ul>
+					<li><a href="resources/Website/Draft 2/TeamProjectWebsite.html" target="_blank" rel="noopener">TeamProjectWebsite.html (Draft 2)</a></li>
+					<li><a href="resources/Website/Draft 3/Home_Page_HTML.html" target="_blank" rel="noopener">Home_Page_HTML.html (Draft 3)</a></li>
+					<li><a href="resources/Website/Draft 3/Visualization_Page_HTML.html" target="_blank" rel="noopener">Visualization_Page_HTML.html (Draft 3)</a></li>
+					<li><a href="resources/Website/Draft 3/Data_Description_Page_HTML.html" target="_blank" rel="noopener">Data_Description_Page_HTML.html (Draft 3)</a></li>
+				</ul>
+			</section>
+
+			<section class="section">
+				<h3>Selected Visuals</h3>
+				<div class="project-grid">
+					<figure>
+						<img src="resources/Website/Draft 3/MentalHealth.png" alt="Mental health visualization" />
+						<figcaption>Mental health indicators</figcaption>
+					</figure>
+					<figure>
+						<img src="resources/Website/Draft 3/SNSAddiction.png" alt="SNS addiction visualization" />
+						<figcaption>SNS addiction indicators</figcaption>
+					</figure>
+					<figure>
+						<img src="resources/Website/Draft 3/TimeSpentSNS.png" alt="Time spent on social media visualization" />
+						<figcaption>Time spent on social media</figcaption>
+					</figure>
+				</div>
+			</section>
+
+		</article>
+	</main>
+
+	<footer class="footer">
+		<div class="container">© <span id="year"></span> Christian Sickmeier</div>
+	</footer>
+	<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

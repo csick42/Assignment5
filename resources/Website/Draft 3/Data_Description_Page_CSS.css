@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+/* Contributors: Christian Sickmeier */
+
+#body {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	
+}
+
+/* Navigation Section */
+
+#nav {
+	text-decoration: none;
+	font-size: 120%;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 10px;
+	
+}
+
+#nav_line {
+	border: solid 2px black;
+	
+}
+
+#location {
+	background-color:#BCBCBC;
+}
+
+/* Data Description Page */
+
+#dd_title {
+	font-weight: bold;
+	padding-top: 50px;
+	
+}
+
+#dd_title2 {
+	padding-top: 20px;
+	text-decoration: underline;
+	font-weight: bold;
+	
+}
+
+#dd_text {
+	font-size: 130%;
+	
+}
+
+.info_box {
+	background-color: #C0C0C0;
+	text-align: center;
+	padding: 30px;
+	border: solid 1px black;
+	font-size: 120%;
+	
+}
+
+#dd_var {
+	border: solid 1px black;
+	
+}
+
+#dd_var_title {
+	text-align: center;
+	padding-top: 25px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.dd_vm_title {
+	text-align: center;
+	
+}
+
+#dd_atd {
+	border: solid 1px black;
+	
+}
+
+#dd_atd_title {
+	text-align: center;
+	padding-top: 25px;
+	text-decoration: underline;
+	font-weight: bold;
+	
+}
+
+#dd_ds {
+	border: solid 2px black;
+}

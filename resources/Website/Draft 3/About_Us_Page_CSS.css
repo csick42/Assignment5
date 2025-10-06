@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+/* Contributors: Christian Sickmeier */
+
+#body {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	
+}
+
+/* Navigation Section */
+
+#nav {
+	text-decoration: none;
+	font-size: 120%;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 10px;
+	
+}
+
+#nav_line {
+	border: solid 2px black;
+	
+}
+
+#location {
+	background-color:#BCBCBC;
+}
+
+/* About Us Page */
+
+#au_title {
+	font-weight: bold;
+	padding-top: 50px;
+	text-align: center;
+	
+}
+
+#au_text {
+	font-size: 120%;
+	text-align: center;
+	
+}
+
+.au_member {
+	text-align: center;
+	
+}
+
+.photo_placeholder {
+	width: 200px;
+	height: 150px;
+	margin-left: 70px;
+	
+}
+
+#ContactForm {
+	
+	
+}
