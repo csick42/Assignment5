@@ -1,0 +1,56 @@
+# Python
+.venv/
+venv/
+ENV/
+env/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.so
+.coverage
+.coverage.*
+.pytest_cache/
+htmlcov/
+.mypy_cache/
+.pyre/
+
+# Environment files
+.env
+.env.local
+.env.*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Flask
+instance/
+.webassets-cache
+
+# Packaging/build
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Logs
+*.log
+
+# Caches and temporary files
+.cache/
+tmp/
+*.tmp
+*~
+
+# Database files
+*.sqlite3
+*.db

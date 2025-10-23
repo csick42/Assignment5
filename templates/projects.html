@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Projects | Christian Sickmeier{% endblock %}
+
+{% block content %}
+<div class="container section">
+	<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+		<h1 style="margin: 0;">Projects</h1>
+		<a href="{{ url_for('add_project') }}" class="btn btn-primary">
+			<span style="font-size: 1.2em; margin-right: 0.3rem;">➕</span>
+			Add New Project
+		</a>
+	</div>
+
+	<!-- Display projects from database -->
+	{% if projects %}
+	<div class="section">
+		<h2>My Projects Database</h2>
+		<table class="projects-table">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Description</th>
+					<th>Image</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for project in projects %}
+				<tr class="project-row" data-url="{{ url_for('project_detail', project_id=project['id']) }}">
+					<td><strong>{{ project['title'] }}</strong></td>
+					<td>{{ project['description'][:150] }}{% if project['description']|length > 150 %}...{% endif %}</td>
+					<td>
+						{% if project['image_filename'] %}
+						<img src="{{ url_for('static', filename='images/' + project['image_filename']) }}" 
+							 alt="{{ project['title'] }}" 
+							 style="max-width: 300px; height: auto;" />
+						{% else %}
+						<em>No image</em>
+						{% endif %}
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	{% else %}
+	<p>No projects found in the database. <a href="{{ url_for('add_project') }}">Add a new project</a>.</p>
+	{% endif %}
+
+</div>
+
+<script>
+	// Handle project row clicks
+	document.addEventListener('DOMContentLoaded', function() {
+		document.querySelectorAll('.project-row').forEach(function(row) {
+			row.addEventListener('click', function() {
+				window.location.href = this.dataset.url;
+			});
+		});
+	});
+</script>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Thank You | Christian Sickmeier{% endblock %}
+
+{% block content %}
+<div class="container section">
+	<article class="card">
+		<h1>Thank you!</h1>
+		<p>Your project has been added successfully to the database!</p>
+		<div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+			<a class="btn" href="{{ url_for('projects') }}">View All Projects</a>
+			<a class="btn" href="{{ url_for('add_project') }}">Add Another Project</a>
+			<a class="btn" href="{{ url_for('home') }}">Return to Home</a>
+		</div>
+	</article>
+</div>
+{% endblock %}

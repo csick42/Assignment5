@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Christian Sickmeier | Honors ePortfolio{% endblock %}
+
+{% block content %}
+<section class="hero">
+	<div class="container">
+		<div class="card grid-2">
+			<div>
+				<p class="kicker">Honors ePortfolio</p>
+				<h1>Becoming a Professional</h1>
+				<p>
+					I am an student at IU Bloomington's Kelley School of Business persuing a Master 
+					of Science in Information Systems. My passion lies in storytelling in 
+					business—leveraging data to both persuade and inform—while delivering 
+					results across diverse teams and deadlines.
+				</p>
+				<p class="list-inline">
+					<span class="badge">Storytelling with data</span>
+					<span class="badge">Marketing</span>
+					<span class="badge">Professional growth</span>
+				</p>
+				<p>
+					<a class="btn" href="{{ url_for('about') }}">Learn more</a>
+				</p>
+			</div>
+			<figure>
+				<img src="{{ url_for('static', filename='images/profile.JPG') }}" alt="Illustrated avatar placeholder for Christian Sickmeier" />
+			</figure>
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="container grid-2">
+		<div class="card">
+			<h2>About this site</h2>
+			<p>
+				This site curates highlights from my Honors journey—initial goals, how
+				they evolved, and reflections as I prepare for post-grad education and
+				the professional world.
+			</p>
+		</div>
+		<div class="card">
+			<h2>Quick links</h2>
+			<ul>
+				<li><a href="{{ url_for('about') }}">Background, interests, goals</a></li>
+				<li><a href="{{ url_for('resume') }}">Education, experience, skills</a></li>
+				<li><a href="{{ url_for('projects') }}">Selected projects</a></li>
+				<li><a href="{{ url_for('contact') }}">Get in touch</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+{% block footer %}
+<div class="container">
+	<div>© <span id="year"></span> Christian Sickmeier</div>
+	<div>GitHub Repo: <a href="https://github.com/csick42/Assignment5.git" target="_blank" rel="noopener" aria-label="GitHub repository link">github.com/csick42/Assignment5</a></div>
+</div>
+<script>
+	document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+{% endblock %}

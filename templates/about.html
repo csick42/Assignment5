@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}About | Christian Sickmeier{% endblock %}
+
+{% block content %}
+<div class="container section">
+	<article class="card">
+		<h1>About Me</h1>
+		<figure>
+			<img src="{{ url_for('static', filename='images/profile.JPG') }}" alt="Illustrated avatar placeholder for Christian" />
+			<figcaption>MSIS student at IU Bloomington's Kelley School of Business, storyteller in business.</figcaption>
+		</figure>
+		<p>
+			I have always had a deep appreciation for trees. The resilience they display, 
+			bending and swaying gracefully but never breaking in the face of storms, 
+			mirrors how I handle challenges that come my way. On projects, I enjoy the 
+			camaraderie formed as well as the opportunities to grow and learn inherent 
+			when challenges arise.
+		</p>
+		<p>
+			As an IU graduate student, I am pursuing an MSIS (Master of Science in 
+			Information Systems) from the Kelley School of Business. My passion lies in 
+			the power of storytelling, where I aim to impact people by leveraging 
+			technology to solve business problems.
+		</p>
+		<p>
+			I am a storyteller in the business world who can manage diverse deadlines
+			across multiple groups and consistently deliver exceptional results.
+		</p>
+	</article>
+</div>
+{% endblock %}

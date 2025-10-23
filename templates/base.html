@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{% block title %}Christian Sickmeier | Honors ePortfolio{% endblock %}</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+	{% block meta %}
+	<meta name="description" content="Christian Sickmeier – storyteller in business leveraging data to persuade and inform. Honors ePortfolio." />
+	{% endblock %}
+</head>
+<body>
+	<header class="header">
+		<div class="container nav">
+			<div class="brand">Christian Sickmeier</div>
+			<nav aria-label="Primary">
+				<ul>
+					<li><a {% if request.endpoint == 'home' %}class="active"{% endif %} href="{{ url_for('home') }}">Home</a></li>
+					<li><a {% if request.endpoint == 'about' %}class="active"{% endif %} href="{{ url_for('about') }}">About</a></li>
+					<li><a {% if request.endpoint == 'resume' %}class="active"{% endif %} href="{{ url_for('resume') }}">Resume</a></li>
+					<li><a {% if request.endpoint == 'projects' %}class="active"{% endif %} href="{{ url_for('projects') }}">Projects</a></li>
+					<li><a {% if request.endpoint == 'contact' %}class="active"{% endif %} href="{{ url_for('contact') }}">Contact</a></li>
+					<li><a {% if request.endpoint == 'add_project' %}class="active nav-highlight"{% endif %} class="nav-highlight" href="{{ url_for('add_project') }}">
+						<span style="font-size: 1.1em;">➕</span> Add Project
+					</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		{% block content %}
+		<!-- Content will be inserted here -->
+		{% endblock %}
+	</main>
+
+	<footer class="footer">
+		{% block footer %}
+		<div class="container">&copy; <span id="year"></span> Christian Sickmeier</div>
+		{% endblock %}
+	</footer>
+	
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>

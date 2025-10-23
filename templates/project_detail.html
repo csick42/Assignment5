@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project['title'] }} | Christian Sickmeier{% endblock %}
+
+{% block content %}
+<div class="container section">
+	<div style="margin-bottom: 1rem;">
+		<a href="{{ url_for('projects') }}" style="color: var(--accent); text-decoration: none;">
+			← Back to Projects
+		</a>
+	</div>
+
+	<article class="card">
+		<h1>{{ project['title'] }}</h1>
+		
+		<div class="project-meta" style="color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+			<p>Added: {{ project['date_added'] }}</p>
+		</div>
+
+		<!-- Main Project Image -->
+		{% if project['image_filename'] %}
+		<div style="margin: 2rem 0;">
+			<img src="{{ url_for('static', filename='images/' + project['image_filename']) }}"
+				 alt="{{ project['title'] }}"
+				 style="max-width: 100%; height: auto; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.1);" />
+		</div>
+		{% endif %}
+
+		<!-- Full Description -->
+		<div class="section">
+			<h2>Description</h2>
+			<p style="line-height: 1.8; white-space: pre-wrap;">{{ project['description'] }}</p>
+		</div>
+
+		<!-- Relevant Links/Files -->
+		{% if project.get('links') %}
+		<div class="section">
+			<h2>Related Files & Links</h2>
+			<ul>
+			{% for link in project['links'] %}
+				<li>
+					<a href="{{ link['url'] }}" target="_blank" rel="noopener">{{ link['label'] }}</a>
+				</li>
+			{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+
+		<!-- Additional Images (for Social Media project) -->
+		{% if project['title'] == 'The Effects of Social Media on the Health of College Students' %}
+		<div class="section">
+			<h2>Selected Visuals</h2>
+			<div class="project-grid">
+				<figure>
+					<img src="{{ url_for('static', filename='resources/Website/Draft 3/MentalHealthPercent.png') }}" alt="Mental health pie chart" />
+					<figcaption>Mental health indicators (pie chart)</figcaption>
+				</figure>
+				<figure>
+					<img src="{{ url_for('static', filename='resources/Website/Draft 3/SNSAddictionPercent.png') }}" alt="SNS addiction pie chart" />
+					<figcaption>SNS addiction indicators (pie chart)</figcaption>
+				</figure>
+				<figure>
+					<img src="{{ url_for('static', filename='resources/Website/Draft 3/TimeSpentSNSPercent.png') }}" alt="Time spent on social media pie chart" />
+					<figcaption>Time spent on social media (pie chart)</figcaption>
+				</figure>
+			</div>
+		</div>
+		{% endif %}
+
+		<!-- Action Buttons -->
+		<div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+			<a href="{{ url_for('projects') }}" class="btn">← Back to Projects</a>
+			<a href="{{ url_for('add_project') }}" class="btn btn-primary">➕ Add Another Project</a>
+		</div>
+	</article>
+</div>
+
+<style>
+	.project-meta {
+		padding: 0.75rem;
+		background: rgba(255,255,255,0.02);
+		border-left: 3px solid var(--accent-2);
+		border-radius: 0.25rem;
+	}
+</style>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Add New Project | Christian Sickmeier{% endblock %}
+
+{% block content %}
+<div class="container section">
+	<h1>Add New Project</h1>
+	<p>Fill out the form below to add a new project to your portfolio database.</p>
+
+	<form class="form" action="{{ url_for('add_project') }}" method="post" novalidate>
+		<div>
+			<label class="label" for="title">Project Title</label>
+			<input class="input" id="title" name="title" type="text" required aria-required="true" />
+			<p class="error" id="titleError" aria-live="polite"></p>
+		</div>
+		<div>
+			<label class="label" for="description">Project Description</label>
+			<textarea class="input" id="description" name="description" rows="5" required aria-required="true"></textarea>
+			<p class="error" id="descriptionError" aria-live="polite"></p>
+		</div>
+		<div>
+			<label class="label" for="image_filename">Image Filename</label>
+			<input class="input" id="image_filename" name="image_filename" type="text" required aria-required="true" placeholder="e.g., myproject.jpg" />
+			<p class="help-text">Enter the filename of the image you've added to the static/images folder (e.g., project1.jpg)</p>
+			<p class="error" id="imageError" aria-live="polite"></p>
+		</div>
+		<button class="btn btn-primary" type="submit">Add Project</button>
+	</form>
+</div>
+
+<script>
+	// Minimal client-side validation for clear error messages
+	const form = document.querySelector('form');
+	form.addEventListener('submit', (e) => {
+		let valid = true;
+		const title = document.getElementById('title');
+		const description = document.getElementById('description');
+		const imageFilename = document.getElementById('image_filename');
+
+		document.getElementById('titleError').textContent = '';
+		document.getElementById('descriptionError').textContent = '';
+		document.getElementById('imageError').textContent = '';
+
+		if (!title.value.trim()) { 
+			valid = false; 
+			document.getElementById('titleError').textContent = 'Project title is required.'; 
+		}
+		if (!description.value.trim()) { 
+			valid = false; 
+			document.getElementById('descriptionError').textContent = 'Project description is required.'; 
+		}
+		if (!imageFilename.value.trim()) { 
+			valid = false; 
+			document.getElementById('imageError').textContent = 'Image filename is required.'; 
+		}
+
+		if (!valid) e.preventDefault();
+	});
+</script>
+
+<style>
+	.help-text {
+		font-size: 0.875rem;
+		color: #666;
+		margin-top: 0.25rem;
+	}
+</style>
+{% endblock %}

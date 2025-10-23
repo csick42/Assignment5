@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | Christian Sickmeier{% endblock %}
+
+{% block content %}
+<div class="container section">
+	<h1>Contact</h1>
+	<p>Email: <a href="mailto:csickmei@iu.edu">csickmei@iu.edu</a> · LinkedIn: <a href="https://www.linkedin.com/in/christian-sickmeier" target="_blank" rel="noopener">linkedin.com/in/christian-sickmeier</a> · GitHub Repo: <a href="https://github.com/csick42/Assignment5.git" target="_blank" rel="noopener">github.com/csick42/Assignment5</a></p>
+
+	<form class="form" action="{{ url_for('thankyou') }}" method="get" novalidate>
+		<div>
+			<label class="label" for="firstName">First Name</label>
+			<input class="input" id="firstName" name="firstName" type="text" required aria-required="true" pattern="^[A-Za-z\-\s']+$" title="Use letters, spaces, apostrophes, and hyphens only." />
+			<p class="error" id="firstNameError" aria-live="polite"></p>
+		</div>
+		<div>
+			<label class="label" for="lastName">Last Name</label>
+			<input class="input" id="lastName" name="lastName" type="text" required aria-required="true" pattern="^[A-Za-z\-\s']+$" title="Use letters, spaces, apostrophes, and hyphens only." />
+			<p class="error" id="lastNameError" aria-live="polite"></p>
+		</div>
+		<div>
+			<label class="label" for="email">Email Address</label>
+			<input class="input" id="email" name="email" type="email" required aria-required="true" />
+			<p class="error" id="emailError" aria-live="polite"></p>
+		</div>
+		<div>
+			<label class="label" for="password">Password</label>
+			<input class="input" id="password" name="password" type="password" minlength="8" required aria-required="true" pattern="^(?=.{8,}).+$" title="At least 8 characters." />
+			<p class="error" id="passwordError" aria-live="polite"></p>
+		</div>
+		<div>
+			<label class="label" for="confirmPassword">Confirm Password</label>
+			<input class="input" id="confirmPassword" name="confirmPassword" type="password" minlength="8" required aria-required="true" pattern="^(?=.{8,}).+$" title="Must match the password and be at least 8 characters." />
+			<p class="error" id="confirmPasswordError" aria-live="polite"></p>
+		</div>
+		<button class="btn" type="submit">Send</button>
+	</form>
+</div>
+
+<script>
+	// Minimal client-side validation for clear error messages
+	const form = document.querySelector('form');
+	form.addEventListener('submit', (e) => {
+		let valid = true;
+		const firstName = document.getElementById('firstName');
+		const lastName = document.getElementById('lastName');
+		const email = document.getElementById('email');
+		const password = document.getElementById('password');
+		const confirmPassword = document.getElementById('confirmPassword');
+
+		document.getElementById('firstNameError').textContent = '';
+		document.getElementById('lastNameError').textContent = '';
+		document.getElementById('emailError').textContent = '';
+		document.getElementById('passwordError').textContent = '';
+		document.getElementById('confirmPasswordError').textContent = '';
+
+		if (!firstName.validity.valid) { valid = false; document.getElementById('firstNameError').textContent = firstName.title; }
+		if (!lastName.validity.valid) { valid = false; document.getElementById('lastNameError').textContent = lastName.title; }
+		if (!email.validity.valid) { valid = false; document.getElementById('emailError').textContent = 'Enter a valid email address.'; }
+		if (password.value.length < 8) { valid = false; document.getElementById('passwordError').textContent = 'Password must be at least 8 characters.'; }
+		if (confirmPassword.value !== password.value) { valid = false; document.getElementById('confirmPasswordError').textContent = 'Passwords must match.'; }
+
+		if (!valid) e.preventDefault();
+	});
+</script>
+{% endblock %}
